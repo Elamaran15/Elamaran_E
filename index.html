@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elamaran E: Senior Software Engineer</title>
+  <meta name="description" content="Elamaran E is a senior software engineer who builds event-driven, cloud-native Java systems across banking, automotive and cybersecurity. Five awards in five years.">
+  <meta name="theme-color" content="#050607">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://elamaran15.github.io/Elamaran_E/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elamaran E: I build the systems you never have to think about.">
+  <meta property="og:description" content="Senior Software Engineer · Java 21 · Spring Boot · Kafka · Kubernetes · AWS. Five awards, one every year since 2021.">
+  <meta property="og:image" content="https://elamaran15.github.io/Elamaran_E/assets/img/portrait.jpg">
+  <meta property="og:url" content="https://elamaran15.github.io/Elamaran_E/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elamaran E",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Securin Inc." },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vels Institute of Science, Technology & Advanced Studies" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN" },
+    "email": "mailto:elamaran1599@gmail.com",
+    "sameAs": ["https://www.linkedin.com/in/elamaran-e-05a250241/", "https://github.com/Elamaran15"]
+  }
+  </script>
+
+  <!-- Enable the JS-only hidden-before-reveal states before first paint -->
+  <script>
+    (function (d) {
+      d.classList.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+      // Safety net: if the scripts never boot (CDN down), fall back to the static layout.
+      setTimeout(function () { if (!window.__booted) { d.classList.remove('motion', 'is-loading'); d.classList.add('no-motion'); } }, 7000);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/portrait.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ GLOBAL LAYERS ============ -->
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__panel preloader__panel--top"></div>
+    <div class="preloader__panel preloader__panel--bottom"></div>
+    <div class="preloader__inner">
+      <span class="preloader__count">000</span>
+      <span class="preloader__label mono">compiling assets<span class="caret">_</span></span>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" data-cursor="TOP">ELAMARAN<span class="accent">.</span>E</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#awards" class="nav__awards" data-magnetic>Awards <span class="star">★</span></a>
+      <a href="#bankly" data-magnetic>Bankly</a>
+      <a href="#story" data-magnetic>Story</a>
+      <a href="#work" data-magnetic>Work</a>
+      <a href="#contact" data-magnetic>Contact</a>
+    </nav>
+    <div class="nav__meta mono">
+      <span class="nav__status"><span class="pulse-dot"></span>building @ securin</span>
+      <span class="nav__progress" aria-hidden="true">000%</span>
+    </div>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    <div class="nav__bar" aria-hidden="true"><span></span></div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#awards">Awards <span class="star">★</span></a>
+      <a href="#bankly">Bankly</a>
+      <a href="#story">Story</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="mono menu__foot">elamaran1599@gmail.com</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ 01 HERO ============ -->
+    <section class="hero" id="top" data-section="hero">
+      <div class="hero__sticky">
+        <div class="hero__scene" aria-hidden="true">
+          <canvas class="hero__seq"></canvas>
+          <video class="hero__video" muted playsinline preload="none"></video>
+          <div class="hero-fb">
+            <div class="hero-fb__glow"><span class="g1"></span><span class="g2"></span></div>
+            <svg class="hero-fb__orbit" viewBox="-500 -500 1000 1000">
+              <ellipse rx="460" ry="120" />
+              <ellipse rx="380" ry="96" />
+              <ellipse rx="300" ry="74" />
+              <circle class="hero-fb__sat" r="7" cx="460" cy="0" />
+              <circle class="hero-fb__sat hero-fb__sat--ember" r="5" cx="-300" cy="0" />
+            </svg>
+            <div class="hero-fb__portrait">
+              <img src="assets/img/portrait.jpg" alt="" width="848" height="817" fetchpriority="high">
+              <span class="hero-fb__rim"></span>
+            </div>
+          </div>
+          <div class="hero__scan"></div>
+        </div>
+
+        <div class="hero__content">
+          <p class="label hero__label" data-scramble>[01] Senior Software Engineer @ Securin · Chennai, IN</p>
+          <h1 class="hero__name" aria-label="Elamaran"><span class="hero__name-inner" data-split="chars">ELAMARAN</span></h1>
+          <p class="hero__headline">I build the systems <em class="serif">you never</em> have to think about.</p>
+          <div class="hero__bottom">
+            <span class="mono hero__scroll">scroll to boot <span class="caret">↓</span></span>
+            <a class="chip chip--gold" href="#awards" data-cursor="VIEW">★ 5 awards · 5 consecutive years</a>
+            <span class="mono hero__stack">Java 21 · Spring Boot · Kafka · Kubernetes · AWS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 STATS ============ -->
+    <section class="stats" data-section="stats" aria-label="At a glance">
+      <ul class="stats__grid">
+        <li><span class="stats__num" data-count="6" data-suffix="+">6+</span><span class="stats__label">years shipping production Java</span></li>
+        <li class="stats__gold"><span class="stats__num" data-count="5" data-prefix="★ ">★ 5</span><span class="stats__label">awards, one every year since 2021</span></li>
+        <li><span class="stats__num" data-count="3">3</span><span class="stats__label">industries: banking, automotive, cybersecurity</span></li>
+        <li><span class="stats__num" data-count="100" data-suffix="K+">100K+</span><span class="stats__label">daily mobile-banking sessions served</span></li>
+        <li><span class="stats__num" data-count="3000" data-suffix="+" data-comma>3,000+</span><span class="stats__label">engineers following his work on LinkedIn</span></li>
+      </ul>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>JAVA 21 ✦ SPRING BOOT ✦ KAFKA ✦ KUBERNETES ✦ AWS ✦ POSTGRESQL ✦ JOBRUNR ✦ jOOQ ✦ LIQUIBASE ✦ DATADOG ✦ GITHUB ACTIONS ✦ DOCKER ✦ SPRING CLOUD ✦&nbsp;</span>
+          <span>JAVA 21 ✦ SPRING BOOT ✦ KAFKA ✦ KUBERNETES ✦ AWS ✦ POSTGRESQL ✦ JOBRUNR ✦ jOOQ ✦ LIQUIBASE ✦ DATADOG ✦ GITHUB ACTIONS ✦ DOCKER ✦ SPRING CLOUD ✦&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 TROPHY ROOM ============ -->
+    <section class="trophy" id="awards" data-section="awards" aria-labelledby="trophy-title">
+      <div class="trophy__sticky">
+        <div class="trophy__intro">
+          <p class="label label--gold" data-scramble>[02] The trophy room</p>
+          <h2 class="trophy__title" id="trophy-title"><span data-split="chars">ONE EVERY</span> <em class="serif">year.</em></h2>
+          <p class="mono trophy__streak">streak: 2021 → 2025 · 5/5 · unbroken</p>
+        </div>
+
+        <div class="trophy__stage">
+          <div class="odometer" aria-hidden="true">
+            <span>2</span><span>0</span><span>2</span>
+            <span class="odometer__col"><span class="odometer__strip"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span>
+          </div>
+
+          <div class="awards">
+            <article class="award" data-digit="1">
+              <div class="award__media">
+                <span class="award__spot" aria-hidden="true"></span>
+                <figure class="award__frame award__frame--doc" data-lightbox="awards" data-caption="GEM Award · Intellect Design Arena · Dec 2021">
+                  <img src="assets/awards/01-gem-2021.jpg" alt="GEM Award winners newsletter, December 2021, naming Elamaran Elangovan" loading="lazy" decoding="async" width="864" height="491">
+                  <span class="award__sweep" aria-hidden="true"></span>
+                </figure>
+              </div>
+              <div class="award__text">
+                <p class="award__year">2021</p>
+                <h3 class="award__name">GEM Award</h3>
+                <p class="award__chips"><span class="chip">Intellect Design Arena</span><span class="chip">Dec 2021</span></p>
+                <p class="award__cite">"For the remarkable achievements on UAT/Pre-Pilot production support and multilingual changes, with quick turnaround and quality of delivery."</p>
+                <blockquote class="award__quote serif">"It always feels great to be appreciated by your organization." <cite class="mono">from LinkedIn</cite></blockquote>
+              </div>
+            </article>
+
+            <article class="award" data-digit="2">
+              <div class="award__media">
+                <span class="award__spot" aria-hidden="true"></span>
+                <figure class="award__moment" data-lightbox="awards" data-caption="Receiving the GEM Award in person · Nov 2022">
+                  <img src="assets/feed/2022-gem-award-moment.jpg" alt="Elamaran receiving the GEM Award trophy from his mentor" loading="lazy" decoding="async">
+                </figure>
+                <figure class="award__frame" data-lightbox="awards" data-caption="GEM Award · Intellect Design Arena · Nov 2022">
+                  <img src="assets/awards/02-gem-2022.jpg" alt="Crystal GEM Award star trophy, November 2022" loading="lazy" decoding="async" width="960" height="1280">
+                  <span class="award__sweep" aria-hidden="true"></span>
+                </figure>
+              </div>
+              <div class="award__text">
+                <p class="award__year">2022</p>
+                <h3 class="award__name">GEM Award</h3>
+                <p class="award__chips"><span class="chip">Intellect Design Arena</span><span class="chip">Nov 2022</span></p>
+                <p class="award__cite">"Excellent contribution to CBX CRs, priority support for VCB, and bringing HLBB Cambodia &amp; Singapore issues below 3."</p>
+                <img class="award__strip" src="assets/feed/2022-gem-award-newsletter.jpg" alt="GEM Award winners November 2022 newsletter header naming Elamaran Elangovan" loading="lazy" decoding="async">
+                <blockquote class="award__quote serif">"After school days, almost 7 years, this is the first award that I am holding in my hand." <cite class="mono">from LinkedIn</cite></blockquote>
+              </div>
+            </article>
+
+            <article class="award" data-digit="3">
+              <div class="award__media">
+                <span class="award__spot" aria-hidden="true"></span>
+                <figure class="award__frame" data-lightbox="awards" data-caption="Project Recognition Award · Intellect × Bank Muamalat · Aug 2023">
+                  <img src="assets/awards/03-project-recognition-2023.jpg" alt="Acrylic Bank Muamalat project recognition trophy, August 2023" loading="lazy" decoding="async" width="960" height="1280">
+                  <span class="award__sweep" aria-hidden="true"></span>
+                </figure>
+              </div>
+              <div class="award__text">
+                <p class="award__year">2023</p>
+                <h3 class="award__name">Project Recognition</h3>
+                <p class="award__chips"><span class="chip">Intellect · Bank Muamalat</span><span class="chip">Aug 2023</span></p>
+                <p class="award__cite">"We salute your noteworthy contribution and unwavering commitment in taking the BMMB project to go-live."</p>
+                <blockquote class="award__quote serif">"From the thrill of my first flight to the honor of receiving two GEM Awards…" <cite class="mono">from LinkedIn</cite></blockquote>
+              </div>
+            </article>
+
+            <article class="award" data-digit="4">
+              <div class="award__media">
+                <span class="award__spot" aria-hidden="true"></span>
+                <figure class="award__frame award__frame--doc" data-lightbox="awards" data-caption="Insta Award · Infosys · Jun 2024">
+                  <img src="assets/awards/04-insta-2024.jpg" alt="Infosys Insta Awards certificate of appreciation, June 2024" loading="lazy" decoding="async" width="800" height="553">
+                  <span class="award__sweep" aria-hidden="true"></span>
+                </figure>
+              </div>
+              <div class="award__text">
+                <p class="award__year">2024</p>
+                <h3 class="award__name">Insta Award</h3>
+                <p class="award__chips"><span class="chip">Infosys</span><span class="chip">Jun 2024</span></p>
+                <p class="award__cite">"Thank you for the hard work and effort in go-live readiness for the Verso project."</p>
+                <blockquote class="award__quote serif">"Being acknowledged by peers is the most inspiring form of encouragement." <cite class="mono">from LinkedIn</cite></blockquote>
+              </div>
+            </article>
+
+            <article class="award" data-digit="5">
+              <div class="award__media">
+                <span class="award__spot" aria-hidden="true"></span>
+                <figure class="award__frame" data-lightbox="awards" data-caption="RISE Award FY25 · Infosys MFGADM · Apr 2025">
+                  <img src="assets/awards/05-rise-2025.jpg" alt="Gold Infosys RISE Awards FY25 star trophy" loading="lazy" decoding="async" width="960" height="1280">
+                  <span class="award__sweep" aria-hidden="true"></span>
+                </figure>
+              </div>
+              <div class="award__text">
+                <p class="award__year">2025</p>
+                <h3 class="award__name">RISE Award FY25</h3>
+                <p class="award__chips"><span class="chip">Infosys · MFGADM</span><span class="chip">Apr 2025</span></p>
+                <p class="award__cite">"Client praise for significantly faster APIs and consistently on-time delivery."</p>
+                <blockquote class="award__quote serif">"Truly honored and grateful… Excited for what's ahead!" <cite class="mono">from LinkedIn</cite></blockquote>
+              </div>
+            </article>
+          </div>
+
+          <div class="rail" aria-hidden="true">
+            <span class="rail__line"><span class="rail__fill"></span></span>
+            <ol class="rail__nodes"><li>2021</li><li>2022</li><li>2023</li><li>2024</li><li>2025</li></ol>
+            <span class="rail__count mono">01 / 05</span>
+          </div>
+        </div>
+
+        <div class="hall">
+          <p class="hall__line"><span>5 YEARS.</span> <span>5 AWARDS.</span> <span class="gold">0 BREAKS IN THE STREAK.</span></p>
+          <ul class="hall__wall">
+            <li class="hall__card" style="--i:0"><div class="hall__fly"><button class="hall__tilt" data-open="0" data-cursor="VIEW" aria-label="View GEM Award 2021"><img src="assets/awards/01-gem-2021.jpg" alt="" loading="lazy"><span class="hall__glare"></span><span class="hall__meta mono">2021 · GEM</span></button></div></li>
+            <li class="hall__card" style="--i:1"><div class="hall__fly"><button class="hall__tilt" data-open="2" data-cursor="VIEW" aria-label="View GEM Award 2022"><img src="assets/awards/02-gem-2022.jpg" alt="" loading="lazy"><span class="hall__glare"></span><span class="hall__meta mono">2022 · GEM</span></button></div></li>
+            <li class="hall__card" style="--i:2"><div class="hall__fly"><button class="hall__tilt" data-open="3" data-cursor="VIEW" aria-label="View Project Recognition Award 2023"><img src="assets/awards/03-project-recognition-2023.jpg" alt="" loading="lazy"><span class="hall__glare"></span><span class="hall__meta mono">2023 · Recognition</span></button></div></li>
+            <li class="hall__card" style="--i:3"><div class="hall__fly"><button class="hall__tilt" data-open="4" data-cursor="VIEW" aria-label="View Insta Award 2024"><img src="assets/awards/04-insta-2024.jpg" alt="" loading="lazy"><span class="hall__glare"></span><span class="hall__meta mono">2024 · Insta</span></button></div></li>
+            <li class="hall__card" style="--i:4"><div class="hall__fly"><button class="hall__tilt" data-open="5" data-cursor="VIEW" aria-label="View RISE Award FY25"><img src="assets/awards/05-rise-2025.jpg" alt="" loading="lazy"><span class="hall__glare"></span><span class="hall__meta mono">2025 · RISE</span></button></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 BANKLY ============ -->
+    <section class="bankly" id="bankly" data-section="bankly" aria-label="Featured build: Bankly">
+      <p class="label" data-scramble>[03] Featured build</p>
+      <!-- Bankly -->
+      <article class="case case--bankly">
+        <header class="case__head">
+          <span class="case__idx mono">featured · personal project · 2025</span>
+          <h3 class="case__name">Bankly</h3>
+          <p class="case__sub">A cloud-native microservices banking platform, built end to end.</p>
+        </header>
+        <div class="case__body">
+          <div class="case__info">
+            <p>An event-driven User, Transaction and Payment trio. Transfers validate synchronously (WebClient) and settle asynchronously (Kafka), behind Spring Cloud Gateway, Eureka, Config and Resilience4j. It runs on GKE behind an Ingress, ships through GitHub Actions with keyless Workload Identity Federation, and is traced end to end with Zipkin.</p>
+            <ul class="metrics">
+              <li><b data-count="25" data-suffix="K+">25K+</b><span>impressions on launch</span></li>
+              <li><b data-count="10" data-suffix="/10">10/10</b><span>GKE workloads OK</span></li>
+              <li><b data-count="0">0</b><span>Kafka consumer lag</span></li>
+            </ul>
+            <p class="stack mono">Java 21 · Spring Boot 3 · Spring Cloud · Kafka · PostgreSQL · Liquibase · Docker · GKE · GitHub Actions · Zipkin</p>
+            <a class="btn btn--ghost" href="https://github.com/Elamaran15/Bankly" target="_blank" rel="noopener" data-magnetic data-cursor="CODE">View on GitHub ↗</a>
+          </div>
+          <figure class="arch" aria-label="Bankly architecture diagram">
+            <svg viewBox="0 0 420 300">
+              <g class="arch__edges">
+                <path id="e-gw" d="M60 150 H130"/>
+                <path id="e-u" d="M190 150 L250 60"/>
+                <path id="e-t" d="M190 150 H250"/>
+                <path id="e-p" d="M190 150 L250 240"/>
+                <path id="e-k1" d="M310 150 H360"/>
+                <path id="e-k2" d="M310 240 Q 350 230 370 175"/>
+                <path id="e-db" d="M310 60 Q 350 70 370 125"/>
+              </g>
+              <rect class="arch__k8s" x="115" y="20" width="290" height="260" rx="10"/>
+              <text class="arch__k8s-label" x="125" y="36">GKE · namespace bankly</text>
+              <g class="arch__nodes">
+                <g><circle cx="40" cy="150" r="20"/><text x="40" y="190">client</text></g>
+                <g><rect x="130" y="128" width="60" height="44" rx="6"/><text x="160" y="155">gateway</text></g>
+                <g><rect x="250" y="40" width="60" height="40" rx="6"/><text x="280" y="64">users</text></g>
+                <g><rect x="250" y="130" width="60" height="40" rx="6"/><text x="280" y="154">transactions</text></g>
+                <g><rect x="250" y="220" width="60" height="40" rx="6"/><text x="280" y="244">payments</text></g>
+                <g class="arch__kafka"><rect x="360" y="125" width="44" height="50" rx="6"/><text x="382" y="154">kafka</text></g>
+              </g>
+              <circle class="arch__evt" r="4"><animateMotion dur="2.2s" repeatCount="indefinite" path="M190 150 H250 H310 H360"/></circle>
+              <circle class="arch__evt arch__evt--e" r="4"><animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite" path="M370 175 Q 350 230 310 240"/></circle>
+            </svg>
+          </figure>
+        </div>
+        <div class="buildlog" data-drag>
+          <p class="buildlog__label mono">build log · drag →</p>
+          <div class="buildlog__track">
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-01-sequence-diagram.jpg" alt="Bankly sequence diagram: login, transfer, Kafka events" loading="lazy" decoding="async"><figcaption class="mono">architecture · transfer flow</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-03-github-actions.jpg" alt="GitHub Actions build-scan-deploy run succeeded" loading="lazy" decoding="async"><figcaption class="mono">ci/cd ✓ build-scan-deploy</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-05-gke-workloads.jpg" alt="Google Kubernetes Engine workloads all OK" loading="lazy" decoding="async"><figcaption class="mono">gke · 10/10 workloads OK</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-08-k8s-pods.jpg" alt="Kubernetes dashboard pods running" loading="lazy" decoding="async"><figcaption class="mono">k8s · pods running</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-04-eureka.jpg" alt="Eureka service registry with four services up" loading="lazy" decoding="async"><figcaption class="mono">eureka · 4 services UP</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-06-kafka-consumers.jpg" alt="Kafka UI consumer groups with zero lag" loading="lazy" decoding="async"><figcaption class="mono">kafka · lag 0</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-07-kafka-topics.jpg" alt="Kafka UI topics list" loading="lazy" decoding="async"><figcaption class="mono">kafka · topics</figcaption></figure>
+            <figure class="shot" data-lightbox="bankly"><img src="assets/feed/2025-bankly-02-artifact-registry.jpg" alt="Google Artifact Registry with five service images" loading="lazy" decoding="async"><figcaption class="mono">artifact registry · 5 images</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============ 04 MISSION ============ -->
+    <section class="mission" data-section="mission" aria-labelledby="mission-title">
+      <p class="label" data-scramble>[04] Mission</p>
+      <h2 class="mission__text" id="mission-title" data-words>
+        <strong>Great backends are <span class="mission__em">invisible.</span></strong> Nobody notices the payment that cleared, the event that arrived exactly once, or the truck that left on time. <strong>I build for that silence</strong>, and I love the <em class="serif">creative craft</em> it takes to get there.
+      </h2>
+
+      <div class="farmer">
+        <span class="farmer__stem" aria-hidden="true"></span>
+        <p class="label label--ember">The farmer's rule</p>
+        <blockquote class="farmer__quote serif">
+          My father is a farmer. He plants, nurtures, and <span class="farmer__light" data-words>shows up every single day</span>, giving 100% without counting the returns.
+        </blockquote>
+        <p class="farmer__punch"><strong>That's how I write software.</strong> Sincerity, ownership, and a passion for learning. The results grow on their own.</p>
+      </div>
+    </section>
+
+    <!-- ============ 05 PILLARS ============ -->
+    <section class="pillars" data-section="pillars" aria-labelledby="pillars-title">
+      <div class="pillars__sticky">
+        <div class="pillars__head">
+          <p class="label" data-scramble>[05] How I work</p>
+          <h2 class="h2" id="pillars-title" data-split="words">Three promises. <em class="serif">Kept.</em></h2>
+        </div>
+        <div class="pillars__track">
+          <article class="pillar">
+            <span class="pillar__idx mono">01</span>
+            <p class="pillar__num" aria-hidden="true">100%</p>
+            <h3 class="pillar__title">Reliable by design</h3>
+            <p class="pillar__copy">Kafka inbox/outbox, JobRunr retries and Kubernetes leader election. Events land exactly once, and failovers happen without anyone noticing.</p>
+            <svg class="pillar__fig" viewBox="0 0 220 60" aria-hidden="true">
+              <circle cx="20" cy="30" r="8"/><circle cx="110" cy="30" r="8"/><circle cx="200" cy="30" r="8"/>
+              <path d="M28 30H102M118 30H192"/>
+              <circle class="pillar__pulse" r="3"><animateMotion dur="2.4s" repeatCount="indefinite" path="M20 30H200"/></circle>
+            </svg>
+          </article>
+          <article class="pillar">
+            <span class="pillar__idx mono">02</span>
+            <p class="pillar__num" aria-hidden="true">−50%</p>
+            <h3 class="pillar__title">Fast where it matters</h3>
+            <p class="pillar__copy">Query latency halved with jOOQ and PostgreSQL tuning. APIs 30% faster, and async endpoints 25% quicker under load.</p>
+            <svg class="pillar__fig" viewBox="0 0 220 60" aria-hidden="true">
+              <path d="M10 50 A 50 50 0 0 1 110 50"/><path class="pillar__needle" d="M60 50 L95 22"/>
+              <rect x="130" y="34" width="14" height="16"/><rect x="152" y="24" width="14" height="26"/><rect x="174" y="14" width="14" height="36"/><rect x="196" y="6" width="14" height="44"/>
+            </svg>
+          </article>
+          <article class="pillar">
+            <span class="pillar__idx mono">03</span>
+            <p class="pillar__num" aria-hidden="true">1,000+</p>
+            <h3 class="pillar__title">Trusted with the delivery</h3>
+            <p class="pillar__copy">Onsite SPOC in Malaysia for a banking module used by 1,000+ users. 95% UAT pass rate, and 90% of P1 tickets resolved inside SLA.</p>
+            <svg class="pillar__fig" viewBox="0 0 220 60" aria-hidden="true">
+              <circle cx="40" cy="30" r="14"/><circle cx="180" cy="30" r="14"/><path d="M54 30 C 90 0, 130 60, 166 30"/>
+              <circle class="pillar__pulse" r="3"><animateMotion dur="2.8s" repeatCount="indefinite" path="M54 30 C 90 0, 130 60, 166 30"/></circle>
+            </svg>
+          </article>
+          <div class="pillar pillar--end" aria-hidden="true"><p class="serif">…and a fourth, unwritten one: <br>keep learning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 STORY ============ -->
+    <section class="story" id="story" data-section="story" aria-labelledby="story-title">
+      <div class="story__head">
+        <p class="label" data-scramble>[06] Story</p>
+        <h2 class="h2" id="story-title" data-split="words">From a farmer's son in Chennai to <em class="serif">the systems the world runs on.</em></h2>
+      </div>
+
+      <div class="story__grid">
+        <ol class="timeline">
+          <span class="timeline__line" aria-hidden="true"><span></span></span>
+          <li class="tl"><span class="tl__year">2016–2020</span><div class="tl__body"><h3>B.E. Computer Science</h3><p>Vels Institute of Science, Technology &amp; Advanced Studies, Chennai. First <code>public static void main</code>. Never stopped.</p></div></li>
+          <li class="tl"><span class="tl__year">Nov 2020</span><div class="tl__body"><h3>Intellect Design Arena</h3><p>Joins as an Internship Trainee. <em class="serif">"A fresh graduate, unsure of myself and my future path."</em> Corporate banking, the deep end.</p></div></li>
+          <li class="tl"><span class="tl__year">2021</span><div class="tl__body"><h3>System Trainee <a class="badge-award" href="#awards" data-thumb="assets/awards/01-gem-2021.jpg">★ Award</a></h3><p>First <strong>GEM Award</strong>: multilingual rollout and UAT readiness with single-digit defects.</p></div></li>
+          <li class="tl"><span class="tl__year">2022</span><div class="tl__body"><h3>System Engineer <a class="badge-award" href="#awards" data-thumb="assets/awards/02-gem-2022.jpg">★ Award</a></h3><p>Fund transfers and mobile APIs for Hong Leong Bank (Singapore &amp; Cambodia). A second GEM Award, the first award he'd held in his hands since school.</p></div></li>
+          <li class="tl"><span class="tl__year">2023</span><div class="tl__body"><h3>First flight. Onsite in Malaysia. <a class="badge-award" href="#awards" data-thumb="assets/awards/03-project-recognition-2023.jpg">★ Award</a></h3><p>Client SPOC for Bank Muamalat, shipped to go-live. <strong>Project Recognition Award</strong>.</p></div></li>
+          <li class="tl"><span class="tl__year">2024</span><div class="tl__body"><h3>Infosys × Mercedes-Benz <a class="badge-award" href="#awards" data-thumb="assets/awards/04-insta-2024.jpg">★ Award</a></h3><p>Associate Consultant on DNM / Verso, the global dispatch-route engine. <strong>Insta Award</strong> for go-live readiness.</p></div></li>
+          <li class="tl"><span class="tl__year">2025</span><div class="tl__body"><h3>RISE Award &amp; Bankly <a class="badge-award" href="#awards" data-thumb="assets/awards/05-rise-2025.jpg">★ Award</a></h3><p><strong>RISE Award FY25</strong>, with client praise for API performance. Ships <strong>Bankly</strong>, his own cloud-native banking platform on GKE, and 25K+ people see it on LinkedIn.</p></div></li>
+          <li class="tl tl--now"><span class="tl__year">Jan 2026</span><div class="tl__body"><h3>Securin Inc. · Senior Software Engineer</h3><p><em class="serif">"New year, new beginning."</em> Now building in cybersecurity at Securin Labs, IIT Madras Research Park. <span class="mono accent">next chapter: loading<span class="caret">_</span></span></p></div></li>
+        </ol>
+
+        <div class="story__scene" aria-hidden="true">
+          <div class="builder">
+            <video class="builder__video" muted playsinline preload="none"></video>
+            <div class="builder-fb">
+              <div class="builder-fb__world">
+                <div class="holo holo--code">
+                  <span class="holo__bar">VersoRouteService.java</span>
+<pre><span class="k">@Transactional</span>
+<span class="k">public</span> Route plan(Dispatch d) {
+  <span class="c">// exactly-once, every time</span>
+  <span class="k">var</span> evt = outbox.save(d.toEvent());
+  kafka.publish(<span class="s">"route.planned"</span>, evt);
+  <span class="k">return</span> router.optimise(d);
+}</pre>
+                </div>
+                <div class="holo holo--flow">
+                  <span class="holo__bar">kafka · event flow</span>
+                  <svg viewBox="0 0 200 90"><circle cx="20" cy="45" r="9"/><circle cx="100" cy="20" r="9"/><circle cx="100" cy="70" r="9"/><circle cx="180" cy="45" r="9"/><path id="hf1" d="M29 45 L91 20 M29 45 L91 70 M109 20 L171 45 M109 70 L171 45"/><circle class="dot" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" path="M20 45 L100 20 L180 45"/></circle><circle class="dot dot--e" r="3"><animateMotion dur="2.1s" repeatCount="indefinite" path="M20 45 L100 70 L180 45"/></circle></svg>
+                </div>
+                <div class="holo holo--pods">
+                  <span class="holo__bar">k8s · pods</span>
+                  <div class="pods"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="holo holo--map">
+                  <span class="holo__bar">dispatch · routes</span>
+                  <svg viewBox="0 0 200 100"><path class="route" d="M20 70 Q 60 10 110 40"/><path class="route route--2" d="M110 40 Q 150 0 185 55"/><path class="route route--3" d="M20 70 Q 100 100 185 55"/><circle cx="20" cy="70" r="4"/><circle cx="110" cy="40" r="4"/><circle cx="185" cy="55" r="4"/></svg>
+                </div>
+                <div class="holo holo--ai">
+                  <span class="holo__bar">ai · agent workflow</span>
+                  <ul class="mono"><li>› plan()</li><li>› retrieve(context)</li><li>› refactor(service)</li><li>› test ✓ 214 passed</li></ul>
+                </div>
+              </div>
+              <div class="builder-fb__desk"></div>
+              <div class="builder-fb__lamp"></div>
+            </div>
+            <p class="builder__caption mono"><span>Every event delivered.</span><span>Every query tuned.</span><span>Every failover silent.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story__outro">
+        <p class="serif story__close">"Intellect taught me consistency. Every chapter since has been about one thing: learning, relentlessly."</p>
+        <ul class="hobbies mono" aria-label="Beyond the code">
+          <li>gym</li><li>cricket</li><li>road trips</li><li>organic farming</li><li>debugging for fun</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 07 WHAT I BUILD ============ -->
+    <section class="build" data-section="build" aria-labelledby="build-title">
+      <p class="label" data-scramble>[07] What I build</p>
+      <h2 class="h2" id="build-title" data-split="words">Capabilities, <em class="serif">not buzzwords.</em></h2>
+      <ul class="build__list">
+        <li class="cap" data-cursor="OPEN" tabindex="0">
+          <span class="cap__idx mono">01</span><h3 class="cap__title">Event-Driven Microservices</h3>
+          <div class="cap__more"><p>Kafka, inbox/outbox, exactly-once thinking, async REST, Spring Cloud Gateway, Resilience4j.</p></div>
+        </li>
+        <li class="cap" data-cursor="OPEN" tabindex="0">
+          <span class="cap__idx mono">02</span><h3 class="cap__title">Data That Performs</h3>
+          <div class="cap__more"><p>PostgreSQL, Oracle, jOOQ, Liquibase, versioned master data, GDPR-compliant deletion at batch scale.</p></div>
+        </li>
+        <li class="cap" data-cursor="OPEN" tabindex="0">
+          <span class="cap__idx mono">03</span><h3 class="cap__title">Cloud-Native Operations</h3>
+          <div class="cap__more"><p>Kubernetes leader election and HA jobs, AWS Secrets Manager, Docker, GKE, DataDog, Zipkin.</p></div>
+        </li>
+        <li class="cap" data-cursor="OPEN" tabindex="0">
+          <span class="cap__idx mono">04</span><h3 class="cap__title">Delivery Automation</h3>
+          <div class="cap__more"><p>GitHub Actions semantic versioning, Jenkins, SonarQube, Black Duck, release governance with 100% audit traceability.</p></div>
+        </li>
+        <li class="cap" data-cursor="OPEN" tabindex="0">
+          <span class="cap__idx mono">05</span><h3 class="cap__title">Security-Minded Engineering</h3>
+          <div class="cap__more"><p>Now building for cybersecurity at Securin: secure-by-default APIs, secrets management, JWT / Spring Security, and soft-token 2FA from banking.</p></div>
+        </li>
+      </ul>
+      <div class="lab">
+        <p class="label label--ember">Creative lab</p>
+        <p class="lab__copy">I've worked alongside AI every day for over two years: pair-programming, refactoring, automating. Off the clock I build things like Bankly, learn in public, and share it with 3,000+ engineers on LinkedIn. <em class="serif">This site is one of those experiments.</em></p>
+        <div class="lab__links">
+          <a class="link" href="https://github.com/Elamaran15" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="link" href="https://www.linkedin.com/in/elamaran-e-05a250241/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 SELECTED WORK ============ -->
+    <section class="work" id="work" data-section="work" aria-labelledby="work-title">
+      <h2 class="work__title" id="work-title"><span data-split="chars">SELECTED</span> <span class="outline" data-split="chars">WORK</span></h2>
+
+      <div class="work__stack">
+        <!-- 01 Verso -->
+        <article class="case">
+          <header class="case__head">
+            <span class="case__idx mono">01 · Mercedes-Benz · Infosys · 2024–2025</span>
+            <h3 class="case__name">Verso / DNM</h3>
+            <p class="case__sub">The global dispatch-route and delivery-date engine for Mercedes-Benz.</p>
+          </header>
+          <div class="case__body">
+            <div class="case__info">
+              <p>Master data for production plants, service providers and routing rules feeds route calculations used across the world. Reliability came from Kafka inbox/outbox and JobRunr retries, and zero-downtime job failover from Kubernetes leader election. Secrets moved to AWS Secrets Manager, errors were unified with ProblemDetail, and releases were automated with GitHub Actions.</p>
+              <ul class="metrics">
+                <li><b data-count="50" data-prefix="−" data-suffix="%">−50%</b><span>query time (jOOQ + tuning)</span></li>
+                <li><b data-count="30" data-prefix="−" data-suffix="%">−30%</b><span>API latency</span></li>
+                <li><b data-count="100" data-suffix="%">100%</b><span>event consistency</span></li>
+              </ul>
+              <p class="stack mono">Java 21 · Spring Boot · Kafka · PostgreSQL · jOOQ · JobRunr · Kubernetes · AWS · Liquibase · DataDog</p>
+              <a class="badge-award" href="#awards">★ Insta Award 2024 · RISE Award FY25</a>
+            </div>
+            <p class="case__big" aria-hidden="true">01</p>
+          </div>
+        </article>
+
+        <!-- 02 Hong Leong -->
+        <article class="case">
+          <header class="case__head">
+            <span class="case__idx mono">02 · Hong Leong Bank SG &amp; KH · Intellect · 2022–2023</span>
+            <h3 class="case__name">Corporate Banking: CBX</h3>
+            <p class="case__sub">Fund transfers and mobile APIs for a leading Malaysian bank's regional rollout.</p>
+          </header>
+          <div class="case__body">
+            <div class="case__info">
+              <p>Built domestic, cross-border and self fund-transfer flows and the pre/post-login mobile APIs. He was also the production-support SPOC for the CBX product, fixing showstoppers the same day and keeping defects in single digits.</p>
+              <ul class="metrics">
+                <li><b data-count="20" data-prefix="+" data-suffix="%">+20%</b><span>transaction volume</span></li>
+                <li><b data-count="30" data-prefix="+" data-suffix="%">+30%</b><span>team productivity</span></li>
+                <li><b data-count="90" data-suffix="%">90%</b><span>P1s inside SLA</span></li>
+              </ul>
+              <p class="stack mono">Java 8 · Ext JS · Tibero · JBoss EAP · JSP</p>
+              <a class="badge-award" href="#awards">★ GEM Award 2022</a>
+            </div>
+            <p class="case__big" aria-hidden="true">02</p>
+          </div>
+        </article>
+
+        <!-- 03 Muamalat -->
+        <article class="case">
+          <header class="case__head">
+            <span class="case__idx mono">03 · Bank Muamalat MY · Intellect · 2023</span>
+            <h3 class="case__name">Corporate Banking Go-Live</h3>
+            <p class="case__sub">Onsite in Malaysia as the client's single point of contact, all the way to launch.</p>
+          </header>
+          <div class="case__body">
+            <div class="case__info">
+              <p>He coordinated business testing with the bank's users, delivered change requests, built soft-token two-factor authentication, and owned QA builds, release notes and source control through go-live.</p>
+              <ul class="metrics">
+                <li><b data-count="1000" data-suffix="+" data-comma>1,000+</b><span>users on the module</span></li>
+                <li><b data-count="95" data-suffix="%">95%</b><span>UAT pass rate</span></li>
+                <li><b data-count="100" data-suffix="%">100%</b><span>audit traceability</span></li>
+              </ul>
+              <p class="stack mono">Java 8 · Spring Boot · Oracle · Ext JS · WebSphere</p>
+              <a class="badge-award" href="#awards">★ Project Recognition Award 2023</a>
+            </div>
+            <p class="case__big" aria-hidden="true">03</p>
+          </div>
+        </article>
+
+        <!-- 04 QNB -->
+        <article class="case">
+          <header class="case__head">
+            <span class="case__idx mono">04 · QNB ALAHLI · Intellect · 2021–2022</span>
+            <h3 class="case__name">Mobile Pre-Login APIs</h3>
+            <p class="case__sub">Fast, secure first contact for corporate &amp; investment banking customers.</p>
+          </header>
+          <div class="case__body">
+            <div class="case__info">
+              <p>Designed pre-login APIs with the mobility team, set up the Development, Integration and Testing environments, and modularised a legacy codebase for faster debugging.</p>
+              <ul class="metrics">
+                <li><b data-count="100" data-suffix="K+">100K+</b><span>daily sessions</span></li>
+                <li><b data-count="20" data-prefix="+" data-suffix="%">+20%</b><span>initial response speed</span></li>
+                <li><b data-count="25" data-prefix="−" data-suffix="%">−25%</b><span>bugs after refactor</span></li>
+              </ul>
+              <p class="stack mono">Java 8 · Spring Boot · Oracle · Servlets · JBoss</p>
+            </div>
+            <p class="case__big" aria-hidden="true">04</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 09 FINAL CTA ============ -->
+    <section class="cta" id="contact" data-section="cta" aria-labelledby="cta-title">
+      <div class="cta__sticky">
+        <div class="cta__scene" aria-hidden="true">
+          <video class="cta__video" muted playsinline preload="none"></video>
+          <div class="corridor">
+            <div class="corridor__world"></div>
+            <div class="corridor__end"></div>
+          </div>
+        </div>
+        <div class="cta__content">
+          <p class="label label--ember" data-scramble>[09] Contact</p>
+          <h2 class="cta__title" id="cta-title"><span class="cta__line">Let's build something</span> <span class="cta__line"><em class="serif">that doesn't break.</em></span></h2>
+          <div class="cta__actions">
+            <button class="btn btn--ember cta__email" data-copy="elamaran1599@gmail.com" data-magnetic data-cursor="COPY">elamaran1599@gmail.com</button>
+            <a class="link" href="mailto:elamaran1599@gmail.com">Open mail ↗</a>
+            <a class="link" href="https://www.linkedin.com/in/elamaran-e-05a250241/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="link" href="https://github.com/Elamaran15" target="_blank" rel="noopener">GitHub ↗</a>
+            <!-- Résumé: drop the PDF in /assets and uncomment
+            <a class="link" href="assets/Elamaran_E_Resume.pdf" download>Download résumé ↓</a> -->
+          </div>
+          <p class="mono cta__status">status: open to great conversations · response time &lt; 24h · recognised every year since 2021</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__cols">
+      <div><p class="label">Navigate</p><a href="#awards">Awards ★</a><a href="#bankly">Bankly</a><a href="#story">Story</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
+      <div><p class="label">Connect</p><a href="mailto:elamaran1599@gmail.com">Email</a><a href="https://www.linkedin.com/in/elamaran-e-05a250241/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Elamaran15" target="_blank" rel="noopener">GitHub</a></div>
+      <div><p class="label">Education</p><p>B.E. Computer Science<br>Vels University, Chennai<br>2016–2020</p></div>
+      <div><p class="label">Local time</p><p class="mono footer__clock">Chennai --:-- IST</p><button class="link footer__top" data-top>Back to top ↑</button></div>
+    </div>
+    <p class="footer__mark" aria-hidden="true">ELAMARAN E.</p>
+    <p class="footer__legal mono">© 2026 Elamaran E. Designed &amp; engineered by hand, with HTML, CSS, JS and too much coffee.</p>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">←</button>
+    <figure class="lightbox__fig"><img alt=""><figcaption class="mono"></figcaption></figure>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">→</button>
+    <span class="lightbox__count mono"></span>
+  </div>
+  <div class="toast mono" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

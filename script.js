@@ -280,7 +280,7 @@
       lastY = scroll;
     });
 
-    ['awards', 'bankly', 'story', 'work', 'contact'].forEach((id) => {
+    ['awards', 'bankly', 'story', 'stack', 'work', 'contact'].forEach((id) => {
       const link = $(`.nav__links a[href="#${id}"]`);
       ScrollTrigger.create({
         trigger: `#${id}`, start: 'top 50%', end: 'bottom 50%',
@@ -739,12 +739,12 @@
     mm.add('(max-width: 1024px)', () => {
       awards.forEach((aw) => {
         const frame = $('.award__frame', aw);
-        gsap.timeline({ scrollTrigger: { trigger: aw, start: 'top 75%', once: true } })
+        gsap.timeline({ scrollTrigger: { trigger: aw, start: 'top 75%', toggleActions: 'play none none none' } })
           .fromTo(frame, { clipPath: 'circle(0% at 50% 45%)', scale: 1.12 }, { clipPath: 'circle(80% at 50% 45%)', scale: 1, duration: 1.4, ease: 'expo.out' })
           .fromTo($('.award__sweep', aw), { xPercent: -120 }, { xPercent: 120, duration: 1.1, ease: 'power1.inOut' }, .4)
           .from($$('.award__text > *', aw), { y: 30, opacity: 0, stagger: .08, duration: .9, ease: 'expo.out' }, .2);
       });
-      gsap.from(hallFly, { y: 60, opacity: 0, stagger: .08, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.hall', start: 'top 80%', once: true } });
+      gsap.from(hallFly, { y: 60, opacity: 0, stagger: .08, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.hall', start: 'top 80%', toggleActions: 'play none none none' } });
     });
   }
 
@@ -841,6 +841,144 @@
       },
     };
   })();
+
+  /* =========================================================
+     TECH STACK · STACK BUILDER
+     ========================================================= */
+  const STACK = {
+    'AWS':                 { tier: 'Epic',      lvl: 80, since: 2024, where: ['Verso'],                    note: 'Cloud-native services for Mercedes-Benz DNM, with secrets in AWS Secrets Manager.' },
+    'Kubernetes':          { tier: 'Epic',      lvl: 82, since: 2024, where: ['Verso', 'Bankly'],          note: 'Leader election keeps JobRunr jobs highly available, with zero-downtime failover.' },
+    'Docker':              { tier: 'Epic',      lvl: 85, since: 2022, where: ['Verso', 'Bankly'],          note: 'Every service containerised and shipped as an image.' },
+    'GKE':                 { tier: 'Rare',      lvl: 70, since: 2025, where: ['Bankly'],                   note: 'Bankly runs here: ClusterIP services behind an Ingress and a Google load balancer.' },
+    'PostgreSQL':          { tier: 'Legendary', lvl: 90, since: 2024, where: ['Verso', 'Bankly'],          note: 'Query time on large master-data tables cut by 50%.' },
+    'Oracle':              { tier: 'Epic',      lvl: 80, since: 2020, where: ['Bank Muamalat', 'QNB'],     note: 'The core store behind corporate-banking modules.' },
+    'jOOQ':                { tier: 'Epic',      lvl: 78, since: 2024, where: ['Verso'],                    note: 'Type-safe SQL on the hot paths, part of the 50% speed-up.' },
+    'Liquibase':           { tier: 'Rare',      lvl: 75, since: 2024, where: ['Verso', 'Bankly'],          note: 'Versioned schema changes, identical across every environment.' },
+    'Tibero':              { tier: 'Rare',      lvl: 60, since: 2022, where: ['Hong Leong'],               note: 'Oracle-compatible database behind CBX for Hong Leong Bank.' },
+    'Kafka':               { tier: 'Legendary', lvl: 92, since: 2024, where: ['Verso', 'Bankly'],          note: 'Inbox/outbox pattern for 100% event consistency.' },
+    'JobRunr':             { tier: 'Epic',      lvl: 85, since: 2024, where: ['Verso'],                    note: 'Scheduled master-data jobs at 99.5% accuracy, with retries built in.' },
+    'Java 21':             { tier: 'Legendary', lvl: 96, since: 2020, where: ['Securin', 'Verso', 'Bankly', 'Banking'], note: 'Java 8 → 21. Six years, every working day.' },
+    'Spring Boot':         { tier: 'Legendary', lvl: 94, since: 2020, where: ['Securin', 'Verso', 'Bankly', 'Banking'], note: 'REST and async APIs, with unified ProblemDetail errors.' },
+    'Spring Cloud':        { tier: 'Epic',      lvl: 76, since: 2025, where: ['Bankly'],                   note: 'Gateway, Eureka, Config Server and Resilience4j.' },
+    'JPA / Hibernate':     { tier: 'Epic',      lvl: 85, since: 2020, where: ['Banking', 'Bankly'],        note: 'The default persistence layer, dropping to jOOQ where speed matters.' },
+    'REST':                { tier: 'Legendary', lvl: 93, since: 2020, where: ['Everywhere'],               note: 'Mobile pre-login APIs serving 100K+ daily sessions.' },
+    'GitHub Actions':      { tier: 'Epic',      lvl: 82, since: 2024, where: ['Verso', 'Bankly'],          note: 'Semantic versioning, plus keyless deploys to GKE.' },
+    'Jenkins':             { tier: 'Rare',      lvl: 72, since: 2021, where: ['Banking', 'Verso'],         note: 'Build pipelines and release promotion.' },
+    'SonarQube':           { tier: 'Rare',      lvl: 70, since: 2022, where: ['Verso', 'Bankly'],          note: 'Quality gates on every build.' },
+    'DataDog':             { tier: 'Rare',      lvl: 72, since: 2024, where: ['Verso'],                    note: 'Production dashboards, traces and alerts.' },
+    'Zipkin':              { tier: 'Rare',      lvl: 65, since: 2025, where: ['Bankly'],                   note: 'End-to-end request tracing across services.' },
+    'AI pair-programming': { tier: 'Legendary', lvl: 88, since: 2024, where: ['Daily'],                    note: 'Claude and Copilot for refactors, tests and design reviews, every day for 2+ years.' },
+  };
+  const TIER_TAG = { Legendary: 'LEGENDARY · daily driver', Epic: 'EPIC · production-proven', Rare: 'RARE · shipped with it' };
+  const LAYER_NAME = { infra: 'Infra', data: 'Data', messaging: 'Messaging', services: 'Services', delivery: 'Delivery', ai: 'Crown' };
+
+  function initStack() {
+    const section = $('.stackx');
+    if (!section) return;
+    const card = $('.itemcard');
+    const blocks = $$('.blk', section);
+
+    // ---- item card ----
+    let active = null;
+    const show = (blk) => {
+      const name = blk.dataset.tech, d = STACK[name];
+      if (!d || blk === active) return;
+      if (active) active.classList.remove('is-active');
+      active = blk; blk.classList.add('is-active');
+      const layer = blk.closest('[data-layer]').dataset.layer;
+      card.style.setProperty('--c', getComputedStyle(blk.closest('[data-layer]')).getPropertyValue('--c'));
+      $('.itemcard__tier', card).textContent = TIER_TAG[d.tier];
+      $('.itemcard__name', card).textContent = blk.textContent.split(' · ')[0];
+      $('.itemcard__lvl', card).textContent = d.lvl;
+      $('.itemcard__bar span', card).style.setProperty('--lvl', `${d.lvl}%`);
+      const yrs = Math.max(1, 2026 - d.since);
+      $('.itemcard__years', card).textContent = `${yrs} yr${yrs > 1 ? 's' : ''}`;
+      $('.itemcard__layer', card).textContent = LAYER_NAME[layer];
+      $('.itemcard__note', card).textContent = d.note;
+      $('.itemcard__where', card).innerHTML = d.where.map((w) => `<li>${w}</li>`).join('');
+      if (MOTION) gsap.fromTo([$('.itemcard__name', card), $('.itemcard__note', card)], { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: .45, stagger: .05, ease: 'expo.out' });
+    };
+    blocks.forEach((b) => {
+      b.addEventListener('pointerenter', () => show(b));
+      b.addEventListener('focus', () => show(b));
+      b.addEventListener('click', () => show(b));
+    });
+    show($('.blk[data-tech="Java 21"]', section));
+
+    const order = ['infra', 'data', 'messaging', 'services', 'delivery', 'ai'];
+    const layers = order.map((k) => $(`[data-layer="${k}"]`, section));
+    const hudLayers = $('.stackx__layers'), hudBlocks = $('.stackx__blocks'), status = $('.stackx__status b');
+    const total = blocks.length;
+    const setHud = (nLayers, nBlocks, live) => {
+      hudLayers.textContent = `${nLayers}/5`;
+      hudBlocks.textContent = `${nBlocks}/${total}`;
+      status.textContent = live ? 'live ✓' : 'building…';
+      section.classList.toggle('is-live', live);
+      layers.slice(0, 5).forEach((l, i) => l.classList.toggle('is-done', i < nLayers));
+    };
+
+    if (!MOTION) { setHud(5, total, true); return; }
+
+    const mm = gsap.matchMedia();
+
+    /* ---- Desktop: scroll builds the tower, block by block ---- */
+    mm.add('(min-width: 1025px)', () => {
+      const tl = gsap.timeline({ defaults: { ease: 'none' } });
+      const landings = [];   // timeline time at which each block lands
+      const layerDone = [];  // timeline time at which each layer completes
+      let t = .3;
+      layers.forEach((layer, li) => {
+        const row = $$('.blk', layer);
+        row.forEach((b, bi) => {
+          const at = t + bi * .32;
+          tl.fromTo(b, { y: () => -innerHeight * .9, rotate: (bi % 2 ? 1 : -1) * (6 + bi * 2), opacity: 0 },
+            { y: 0, rotate: 0, opacity: 1, duration: .7, ease: 'bounce.out', immediateRender: true }, at);
+          // dust puff on impact
+          tl.fromTo(b, { '--dust': 0, '--dust-s': .4 }, { '--dust': 1, '--dust-s': 1.5, duration: .12 }, at + .32)
+            .to(b, { '--dust': 0, duration: .3 }, at + .44);
+          landings.push(at + .32);
+        });
+        t += row.length * .32 + .5;
+        const flash = $('.layer__flash', layer);
+        if (flash) {
+          tl.fromTo(flash, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .2 }, t - .35)
+            .to(flash, { opacity: 0, y: -8, duration: .3 }, t + .1);
+          tl.fromTo($('.layer__row', layer), { filter: 'brightness(1)' }, { filter: 'brightness(1.6)', duration: .15, yoyo: true, repeat: 1 }, t - .35);
+        }
+        if (li < 5) layerDone.push(t - .35);
+        t += .2;
+      });
+      tl.to({}, { duration: .8 }, t);
+      const liveAt = t;
+
+      // HUD follows the (smoothed) timeline itself, not raw scroll
+      tl.eventCallback('onUpdate', () => {
+        const now = tl.time();
+        setHud(layerDone.filter((x) => now >= x).length, landings.filter((x) => now >= x).length, now >= liveAt);
+      });
+      ScrollTrigger.create({ trigger: section, start: 'top top', end: 'bottom bottom', scrub: .6, animation: tl });
+      setHud(0, 0, false);
+      return () => { gsap.set(blocks, { clearProps: 'all' }); setHud(5, total, true); };
+    });
+
+    /* ---- Tablet / phone: each layer drops in as it scrolls into view ---- */
+    mm.add('(max-width: 1024px)', () => {
+      setHud(0, 0, false);
+      let landed = 0, done = 0;
+      [...layers].reverse().forEach((layer) => { // top of the page first on narrow screens
+        const row = $$('.blk', layer);
+        gsap.from(row, {
+          y: -120, opacity: 0, rotate: () => gsap.utils.random(-10, 10), duration: .9, ease: 'bounce.out', stagger: .08,
+          scrollTrigger: { trigger: layer, start: 'top 85%', toggleActions: 'play none none none' },
+          onComplete: () => {
+            landed += row.length;
+            if (layer.dataset.layer !== 'ai') done++;
+            setHud(done, landed, landed >= total);
+          },
+        });
+      });
+    });
+  }
 
   /* =========================================================
      CTA (corridor walk + email copy)
@@ -941,20 +1079,23 @@
     // The film always starts at the opening shot.
     if ('scrollRestoration' in history && !location.hash) { history.scrollRestoration = 'manual'; window.scrollTo(0, 0); }
     if (MOTION) initSmooth();
-    Field.init();
-    initNav();
-    initHero();
-    initReveals();
-    initMarquee();
-    initMission();
-    initPillars();
-    initStory();
-    initWork();
-    initTrophy();
-    initCTA();
-    Lightbox.init();
-    initCursor();
-    initClock();
+    // Each section boots independently: one failure must never block the rest (or the preloader).
+    const safe = (name, fn) => { try { fn(); } catch (err) { console.error(`[portfolio] ${name} failed`, err); } };
+    safe('field', () => Field.init());
+    safe('nav', initNav);
+    safe('hero', initHero);
+    safe('reveals', initReveals);
+    safe('marquee', initMarquee);
+    safe('mission', initMission);
+    safe('pillars', initPillars);
+    safe('story', initStory);
+    safe('work', initWork);
+    safe('trophy', initTrophy);
+    safe('stack', initStack);
+    safe('cta', initCTA);
+    safe('lightbox', () => Lightbox.init());
+    safe('cursor', initCursor);
+    safe('clock', initClock);
     initPreloader(heroIntro);
 
     if (MOTION) {

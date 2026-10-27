@@ -73,6 +73,7 @@
       <a href="#awards" class="nav__awards" data-magnetic>Awards <span class="star">★</span></a>
       <a href="#bankly" data-magnetic>Bankly</a>
       <a href="#story" data-magnetic>Story</a>
+      <a href="#stack" data-magnetic>Stack</a>
       <a href="#work" data-magnetic>Work</a>
       <a href="#contact" data-magnetic>Contact</a>
     </nav>
@@ -89,6 +90,7 @@
       <a href="#awards">Awards <span class="star">★</span></a>
       <a href="#bankly">Bankly</a>
       <a href="#story">Story</a>
+      <a href="#stack">Stack</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -505,6 +507,104 @@
       </div>
     </section>
 
+    <!-- ============ 08 TECH STACK: STACK BUILDER ============ -->
+    <section class="stackx" id="stack" data-section="stack" aria-labelledby="stack-title">
+      <div class="stackx__sticky">
+        <header class="stackx__head">
+          <p class="label" data-scramble>[08] Tech stack</p>
+          <h2 class="h2" id="stack-title" data-split="words">The stack, <em class="serif">literally stacked.</em></h2>
+          <div class="stackx__hud mono" aria-hidden="true">
+            <span>LAYERS <b class="stackx__layers">0/5</b></span>
+            <span>BLOCKS <b class="stackx__blocks">0/22</b></span>
+            <span class="stackx__status">status: <b>building…</b></span>
+          </div>
+          <p class="stackx__hint mono">scroll to build · hover or tap a block</p>
+        </header>
+
+        <div class="stackx__stage">
+          <div class="tower" role="list" aria-label="Tech stack, from infrastructure up to delivery">
+            <div class="tower__crown" data-layer="ai">
+              <button class="blk blk--crown" data-tech="AI pair-programming" style="--w:1">AI pair-programming · Claude · Copilot</button>
+            </div>
+
+            <div class="layer" data-layer="delivery" role="listitem">
+              <span class="layer__name mono">05 · Delivery</span>
+              <div class="layer__row">
+                <button class="blk" data-tech="GitHub Actions" style="--w:2">GitHub Actions</button>
+                <button class="blk" data-tech="Jenkins" style="--w:1">Jenkins</button>
+                <button class="blk" data-tech="SonarQube" style="--w:1.3">SonarQube</button>
+                <button class="blk" data-tech="DataDog" style="--w:1.2">DataDog</button>
+                <button class="blk" data-tech="Zipkin" style="--w:1">Zipkin</button>
+              </div>
+              <span class="layer__flash mono" aria-hidden="true">LAYER COMPLETE</span>
+            </div>
+
+            <div class="layer" data-layer="services" role="listitem">
+              <span class="layer__name mono">04 · Services</span>
+              <div class="layer__row">
+                <button class="blk blk--hero" data-tech="Java 21" style="--w:1.6">Java 21</button>
+                <button class="blk blk--hero" data-tech="Spring Boot" style="--w:2">Spring Boot</button>
+                <button class="blk" data-tech="Spring Cloud" style="--w:1.6">Spring Cloud</button>
+                <button class="blk" data-tech="JPA / Hibernate" style="--w:1.8">JPA / Hibernate</button>
+                <button class="blk" data-tech="REST" style="--w:1">REST</button>
+              </div>
+              <span class="layer__flash mono" aria-hidden="true">LAYER COMPLETE</span>
+            </div>
+
+            <div class="layer" data-layer="messaging" role="listitem">
+              <span class="layer__name mono">03 · Messaging</span>
+              <div class="layer__row">
+                <button class="blk blk--hero" data-tech="Kafka" style="--w:3">Apache Kafka</button>
+                <button class="blk" data-tech="JobRunr" style="--w:2">JobRunr</button>
+              </div>
+              <span class="layer__flash mono" aria-hidden="true">LAYER COMPLETE</span>
+            </div>
+
+            <div class="layer" data-layer="data" role="listitem">
+              <span class="layer__name mono">02 · Data</span>
+              <div class="layer__row">
+                <button class="blk" data-tech="PostgreSQL" style="--w:2">PostgreSQL</button>
+                <button class="blk" data-tech="Oracle" style="--w:1.2">Oracle</button>
+                <button class="blk" data-tech="jOOQ" style="--w:1">jOOQ</button>
+                <button class="blk" data-tech="Liquibase" style="--w:1.4">Liquibase</button>
+                <button class="blk" data-tech="Tibero" style="--w:1.1">Tibero</button>
+              </div>
+              <span class="layer__flash mono" aria-hidden="true">LAYER COMPLETE</span>
+            </div>
+
+            <div class="layer" data-layer="infra" role="listitem">
+              <span class="layer__name mono">01 · Infra</span>
+              <div class="layer__row">
+                <button class="blk" data-tech="AWS" style="--w:1.4">AWS</button>
+                <button class="blk" data-tech="Kubernetes" style="--w:2">Kubernetes</button>
+                <button class="blk" data-tech="Docker" style="--w:1.4">Docker</button>
+                <button class="blk" data-tech="GKE" style="--w:1.2">GKE</button>
+              </div>
+              <span class="layer__flash mono" aria-hidden="true">LAYER COMPLETE</span>
+            </div>
+
+            <div class="tower__ground" aria-hidden="true"></div>
+          </div>
+
+          <aside class="itemcard" aria-live="polite">
+            <p class="itemcard__tier mono">LEGENDARY · daily driver</p>
+            <h3 class="itemcard__name">Java 21</h3>
+            <div class="itemcard__stat">
+              <span class="mono">LVL</span>
+              <span class="itemcard__bar"><span></span></span>
+              <b class="itemcard__lvl mono">96</b>
+            </div>
+            <dl class="itemcard__meta mono">
+              <div><dt>XP</dt><dd class="itemcard__years">6 yrs</dd></div>
+              <div><dt>Layer</dt><dd class="itemcard__layer">Services</dd></div>
+            </dl>
+            <p class="itemcard__note">Java 8 → 21. Six years, every working day.</p>
+            <ul class="itemcard__where"><li>Securin</li><li>Verso</li><li>Bankly</li><li>Banking</li></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ 08 SELECTED WORK ============ -->
     <section class="work" id="work" data-section="work" aria-labelledby="work-title">
       <h2 class="work__title" id="work-title"><span data-split="chars">SELECTED</span> <span class="outline" data-split="chars">WORK</span></h2>
@@ -629,7 +729,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__cols">
-      <div><p class="label">Navigate</p><a href="#awards">Awards ★</a><a href="#bankly">Bankly</a><a href="#story">Story</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
+      <div><p class="label">Navigate</p><a href="#awards">Awards ★</a><a href="#bankly">Bankly</a><a href="#story">Story</a><a href="#stack">Stack</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
       <div><p class="label">Connect</p><a href="mailto:elamaran1599@gmail.com">Email</a><a href="https://www.linkedin.com/in/elamaran-e-05a250241/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Elamaran15" target="_blank" rel="noopener">GitHub</a></div>
       <div><p class="label">Education</p><p>B.E. Computer Science<br>Vels University, Chennai<br>2016–2020</p></div>
       <div><p class="label">Local time</p><p class="mono footer__clock">Chennai --:-- IST</p><button class="link footer__top" data-top>Back to top ↑</button></div>

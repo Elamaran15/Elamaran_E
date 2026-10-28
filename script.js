@@ -855,6 +855,8 @@
     'jOOQ':                { tier: 'Epic',      lvl: 78, since: 2024, where: ['Verso'],                    note: 'Type-safe SQL on the hot paths, part of the 50% speed-up.' },
     'Liquibase':           { tier: 'Rare',      lvl: 75, since: 2024, where: ['Verso', 'Bankly'],          note: 'Versioned schema changes, identical across every environment.' },
     'Tibero':              { tier: 'Rare',      lvl: 60, since: 2022, where: ['Hong Leong'],               note: 'Oracle-compatible database behind CBX for Hong Leong Bank.' },
+    'Redis':               { tier: 'Epic',      lvl: 75, since: 2026, where: ['Securin'],                  note: 'Caching to keep hot cybersecurity data fast.' },
+    'Elasticsearch':       { tier: 'Epic',      lvl: 75, since: 2026, where: ['Securin'],                  note: 'Search and indexing over large security datasets.' },
     'Kafka':               { tier: 'Legendary', lvl: 92, since: 2024, where: ['Verso', 'Bankly'],          note: 'Inbox/outbox pattern for 100% event consistency.' },
     'JobRunr':             { tier: 'Epic',      lvl: 85, since: 2024, where: ['Verso'],                    note: 'Scheduled master-data jobs at 99.5% accuracy, with retries built in.' },
     'Java 21':             { tier: 'Legendary', lvl: 96, since: 2020, where: ['Securin', 'Verso', 'Bankly', 'Banking'], note: 'Java 8 → 21. Six years, every working day.' },
@@ -867,6 +869,7 @@
     'SonarQube':           { tier: 'Rare',      lvl: 70, since: 2022, where: ['Verso', 'Bankly'],          note: 'Quality gates on every build.' },
     'DataDog':             { tier: 'Rare',      lvl: 72, since: 2024, where: ['Verso'],                    note: 'Production dashboards, traces and alerts.' },
     'Zipkin':              { tier: 'Rare',      lvl: 65, since: 2025, where: ['Bankly'],                   note: 'End-to-end request tracing across services.' },
+    'Kibana':              { tier: 'Rare',      lvl: 70, since: 2026, where: ['Securin'],                  note: 'Dashboards and log exploration on top of Elasticsearch.' },
     'AI pair-programming': { tier: 'Legendary', lvl: 88, since: 2024, where: ['Daily'],                    note: 'Claude and Copilot for refactors, tests and design reviews, every day for 2+ years.' },
   };
   const TIER_TAG = { Legendary: 'LEGENDARY · daily driver', Epic: 'EPIC · production-proven', Rare: 'RARE · shipped with it' };
@@ -958,7 +961,8 @@
       });
       ScrollTrigger.create({ trigger: section, start: 'top top', end: 'bottom bottom', scrub: .6, animation: tl });
       setHud(0, 0, false);
-      return () => { gsap.set(blocks, { clearProps: 'all' }); setHud(5, total, true); };
+      // clear only what the animation set: the inline --w width weight must survive
+      return () => { gsap.set(blocks, { clearProps: 'transform,opacity,--dust,--dust-s' }); setHud(5, total, true); };
     });
 
     /* ---- Tablet / phone: each layer drops in as it scrolls into view ---- */
